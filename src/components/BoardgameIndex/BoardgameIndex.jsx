@@ -19,14 +19,13 @@ export default function BoardgamesIndex() {
     return (
         <>
             <section className="boardgame_list">
-                {boardgames.map(boardgame => {
+                {boardgames.map(boardgame => (
                     <Link key={boardgame.id} to={`/boardgames/${boardgame.id}`}>
                         <article>
-                            
                             <h2>{boardgame.title}</h2>
                         </article>
                     </Link>
-                })}
+                ))}
             </section>
         </>
     )
