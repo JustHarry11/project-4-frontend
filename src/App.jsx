@@ -1,7 +1,8 @@
 import { Routes, Route } from "react-router"
 import Navbar from "./components/Navbar/Navbar"
 
-import BoardgamesIndex from "./components/BoardgameIndex/BoardgameIndex"
+import BoardgameIndex from "./components/BoardgameIndex/BoardgameIndex"
+import BoardgameShow from "./components/BoardgameShow/BoardgameShow"
 
 function App() {
 
@@ -9,7 +10,8 @@ function App() {
     <>
       <Navbar />
       <Routes>
-        <Route path="/boardgames" element={<BoardgamesIndex />} />
+        <Route path="/boardgames" element={<BoardgameIndex />} />
+        <Route path="/boardgames/:boardgameId" element={<BoardgameShow />} />
       </Routes>
     </>
   )
