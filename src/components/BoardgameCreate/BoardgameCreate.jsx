@@ -32,6 +32,7 @@ export default function BoardgameCreate() {
         
         try {
             const { data } = await boardgameCreate(newFormData)
+            console.log(data)
             navigate(`/boardgames/${data.id}`)
         } catch (error) {
             setError(error.response.data)
@@ -60,13 +61,13 @@ export default function BoardgameCreate() {
                 <div className="input-control-create">
                     <label htmlFor="instruction">Instruction</label>
                     <textarea name="instruction" id="instruction" cols="30" rows="3" value={formData.instruction} onChange={handleChange}></textarea>
-                    {error.description && <p className='error-message-create'>{error.description}</p>}
+                    {error.instruction && <p className='error-message-create'>{error.instruction}</p>}
                 </div>
                 {/* Image */}
                 <div className="input-control-create">
                     <label htmlFor="image_url">Image URL</label>
                     <input type="file" name="image_url" id="image_url" onChange={handleChange} />
-                    {error.imageUrl && <p className='error-message-create'>{error.imageUrl}</p>}
+                    {error.image_url && <p className='error-message-create'>{error.image_url}</p>}
                 </div>
                 {/* Type */}
                 <div className="input-control-create">
