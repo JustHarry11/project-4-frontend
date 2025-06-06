@@ -1,33 +1,19 @@
-import { useEffect, useState } from "react"
 import { Link } from "react-router"
+import useFetch from "../../hooks/useFetch"
+
 import { boardgameIndex } from "../../services/boardgames"
 
 export default function BoardgameIndex() {
 
-    const [boardgames, setBoardgames] = useState([])
-    const [error, setError] = useState('')
-    const [loading, setLoading] = useState(true)
+    const { data: boardgames, isLoading, error} = useFetch(boardgameIndex, [])
 
 
-    useEffect(() => {
-        async function getBoardgames() {
-            try {
-                const { data } = await boardgameIndex()
-                setBoardgames(data)
-            } catch {
-                setError('Failed to fetch boardgame data. Please try again later.')
-            } finally {
-                setLoading(false)
-            }
-        }
-        getBoardgames()
-    }, [])
     return (
         <>
             <section className="boardgame_list">
                 {error
                     ? <p className="error-message">{error}</p>
-                    : loading
+                    : isLoading
                         ? <p>Loading ...</p>
                         : boardgames.length > 0
                             ? boardgames.map(boardgame => (
