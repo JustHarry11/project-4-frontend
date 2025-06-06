@@ -9,7 +9,7 @@ export default function Navbar(){
             <nav>
                 <NavLink to="/">♟️</NavLink>
                 <NavLink to="/boardgames">Boardgames</NavLink>
-                <NavLink to="/">Add a game</NavLink>
+                <NavLink to="/boardgames/new">Add a game</NavLink>
             </nav>
         </header>
     )
