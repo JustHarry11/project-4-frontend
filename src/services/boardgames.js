@@ -25,7 +25,7 @@ export const boardgameCreate = async (formData) => {
     try {
         const data = new FormData();
         for (const key in formData) {
-            if(formData[key] !== null && formData[key] !== ''){
+            if (formData[key] !== null && formData[key] !== '') {
                 data.append(key, formData[key]);
             }
         }
@@ -37,6 +37,35 @@ export const boardgameCreate = async (formData) => {
     } catch (error) {
         console.log(error)
         throw new error
+    }
+}
+
+export const boardgameUpdate = async (boardgameId, formData) => {
+    try {
+        const data = new FormData();
+        const skipFields = ['id', 'created_at', 'updated_at', 'owner', 'likes'];
+
+        for (const key in formData) {
+            if (skipFields.includes(key)) continue;
+
+            const value = formData[key]
+            if (value === null || value === '') continue;
+
+            if (key === 'image_url' && typeof value === 'string') continue;
+
+            data.append(key, value)
+        }
+        for (const pair of data.entries()) {
+            console.log(pair[0], pair[1]);
+        }
+        return await axios.put(`${BASE_URL}/boardgames/${boardgameId}/`, data, {
+            headers: {
+                Authorization: `Bearer ${getToken()}`, 'Content-Type': 'multipart/form-data'
+            }
+        })
+    } catch (error) {
+        console.log(error)
+        throw error
     }
 }
 

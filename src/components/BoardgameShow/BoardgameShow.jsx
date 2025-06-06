@@ -3,6 +3,7 @@ import { useParams } from "react-router"
 import useFetch from "../../hooks/useFetch"
 import { useContext } from "react"
 import { UserContext } from "../../contexts/UserContext"
+import { Link } from "react-router"
 
 import BoardgameDelete from "../BoardgameDelete/BoardgameDelete"
 
@@ -31,6 +32,7 @@ export default function BoardgameShow() {
                             <h2>{boardgame.description}</h2>
                             {user && user.id === boardgame.owner?.id &&
                                 <div className="controls">
+                                    <Link className="edit-boardgame" to={`/boardgames/${boardgameId}/edit`}>Edit</Link>
                                     <BoardgameDelete />
                                 </div>}
                         </section>
