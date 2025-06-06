@@ -1,4 +1,5 @@
 import axios from "axios";
+import { getToken } from "../utils/auth";
 const BASE_URL = import.meta.env.VITE_API_BASE_URL
 
 export const boardgameIndex = async () => {
@@ -22,7 +23,17 @@ export const boardgameShow = async (boardgameId) => {
 
 export const boardgameCreate = async (formData) => {
     try {
-        return await axios.post(`${BASE_URL}/boardgames/`, formData)
+        const data = new FormData();
+        for (const key in formData) {
+            if(formData[key] !== null && formData[key] !== ''){
+                data.append(key, formData[key]);
+            }
+        }
+        return await axios.post(`${BASE_URL}/boardgames/`, data, {
+            headers: {
+                Authorization: `Bearer ${getToken()}`, 'Content-Type': 'multipart/form-data'
+            }
+        })
     } catch (error) {
         console.log(error)
         throw new error
