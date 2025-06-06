@@ -18,3 +18,13 @@ export const boardgameShow = async (boardgameId) => {
         throw new error
     }
 }
+
+
+export const boardgameCreate = async (formData) => {
+    try {
+        return await axios.post(`${BASE_URL}/boardgames/`, formData)
+    } catch (error) {
+        console.log(error)
+        throw new error
+    }
+}
