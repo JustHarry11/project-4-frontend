@@ -39,3 +39,16 @@ export const boardgameCreate = async (formData) => {
         throw new error
     }
 }
+
+export const boardgameDelete = async (boardgameId) => {
+    try {
+        return axios.delete(`${BASE_URL}/boardgames/${boardgameId}/`, {
+            headers: {
+                Authorization: `Bearer ${getToken()}`
+            }
+        })
+    } catch (error) {
+        console.log(error)
+        throw new error
+    }
+}
