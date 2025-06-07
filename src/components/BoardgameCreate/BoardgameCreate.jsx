@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Navigate, useNavigate } from "react-router";
 import { boardgameCreate } from "../../services/boardgames";
-
+import './BoardgameCreate.css'
 export default function BoardgameCreate() {
     const [formData, setFormData] = useState({
         title: '',

@@ -1,0 +1,31 @@
+.boardgame_list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.boardgame-index-title {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+.boardgame-filter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto 2rem auto;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.boardgame-filter-container label {
+  font-weight: bold;
+}
+
+.boardgame-filter-container select {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}

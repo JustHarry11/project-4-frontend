@@ -17,27 +17,31 @@ export default function Navbar() {
 
     return (
         <header>
-            <div className="app-logo">
-            </div>
-            <nav>
-                <NavLink to="/">♟️</NavLink>
-                <NavLink to="/boardgames">Boardgames</NavLink>
-                { user
-                    ? (
-                        <>
-                            {/* Signed in routes */}
-                            <NavLink to="/boardgames/new">Add a game</NavLink>
-                            <NavLink onClick={() => { handleSignOut() }} to="/signin">Sign Out</NavLink>
-                        </>
-                    )
-                    : (
-                        <>
-                            {/* Signed out routes*/}
-                            <NavLink to="/signup">Sign Up</NavLink>
-                            <NavLink to="/signin">Sign In</NavLink>
-                        </>
-                    )
-                }
+            <nav className="navbar">
+                <div className="navbar-left">
+                    <NavLink to="/">♟️</NavLink>
+                    <NavLink to="/boardgames">Boardgames</NavLink>
+                </div>
+
+                <div className="navbar-right">
+                    {user
+                        ? (
+                            <>
+                                {/* Signed in routes */}
+                                <NavLink to="/boardgames/new">Add a game</NavLink>
+                                <NavLink onClick={() => { handleSignOut() }} to="/signin">Sign Out</NavLink>
+                            </>
+                        )
+                        : (
+                            <>
+                                {/* Signed out routes*/}
+                                <NavLink to="/signup">Sign Up</NavLink>
+                                <NavLink to="/signin">Sign In</NavLink>
+                            </>
+                        )
+                    }
+                </div>
+
             </nav>
         </header>
     )
