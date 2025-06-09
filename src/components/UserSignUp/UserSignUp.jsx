@@ -24,7 +24,7 @@ export default function UserSignUp() {
         setIsLoading(true)
         try {
             await signupUser(userData)
-            navigate('/login')
+            navigate('/signin')
         } catch (error) {
             setError(error.response.data)
         } finally {

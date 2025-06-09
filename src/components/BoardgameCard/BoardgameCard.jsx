@@ -2,7 +2,6 @@ import './BoardgameCard.css'
 import { Link } from 'react-router'
 
 export default function BoardgameCard({ boardgame }) {
-    console.log(boardgame.image_url)
     return (
         <div className='boardgame-card'>
             <Link to={`/boardgames/${boardgame.id}`}>

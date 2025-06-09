@@ -36,7 +36,7 @@ export const boardgameCreate = async (formData) => {
         })
     } catch (error) {
         console.log(error)
-        throw new error
+        throw error
     }
 }
 
@@ -79,5 +79,22 @@ export const boardgameDelete = async (boardgameId) => {
     } catch (error) {
         console.log(error)
         throw new error
+    }
+}
+
+export const boardgameLike = async (boardgameId) => {
+    try {
+        return axios.post(`${BASE_URL}/boardgames/${boardgameId}/like/`,
+            {},
+            {
+                headers: {
+                    Authorization: `Bearer ${getToken()}`
+                }
+            }
+
+        )
+    } catch (error) {
+        console.log(error)
+        throw error
     }
 }
