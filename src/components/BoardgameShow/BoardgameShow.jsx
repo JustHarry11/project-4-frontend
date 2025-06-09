@@ -5,7 +5,9 @@ import { useContext } from "react"
 import { UserContext } from "../../contexts/UserContext"
 import { Link } from "react-router"
 import './BoardgameShow.css'
+
 import BoardgameDelete from "../BoardgameDelete/BoardgameDelete"
+import BoardgameResult from "../BoardgameResult/BoardgameResult"
 
 export default function BoardgameShow() {
 
@@ -57,6 +59,11 @@ export default function BoardgameShow() {
                                         <Link className="single-edit-boardgame" to={`/boardgames/${boardgameId}/edit`}>Edit</Link>
                                         <BoardgameDelete />
                                     </div>}
+                                {user &&
+                                    <div className="results">
+                                        <BoardgameResult boardgame={boardgame} />
+                                    </div>
+                                }
                             </div>
                         </div>
 
