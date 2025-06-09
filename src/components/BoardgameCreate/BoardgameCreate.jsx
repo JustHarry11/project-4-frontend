@@ -35,7 +35,12 @@ export default function BoardgameCreate() {
             console.log(data)
             navigate(`/boardgames/${data.id}`)
         } catch (error) {
-            setError(error.response.data)
+            if (error.response && error.response.data) {
+                setError(error.response.data);
+            }else {
+                console.error('Unexpected error:', error);
+                setError({ general: 'Something went wrong. Please try again.' });
+            }
         } finally {
             setIsLoading(false)
         }
