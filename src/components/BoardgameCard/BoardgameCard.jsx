@@ -25,9 +25,9 @@ export default function BoardgameCard({ boardgame }) {
                             <div className='likes'>
                                 <span>Likes {boardgame.likes.length}</span>
                             </div>
-                            <div className='owner'>
+                            {/* <div className='owner'>
                                 <span>{boardgame.owner.username.charAt(0).toUpperCase() + boardgame.owner.username.slice(1)}</span>
-                            </div>
+                            </div> */}
                         </div>
                 </div>
         </div>
