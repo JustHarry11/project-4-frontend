@@ -29,6 +29,7 @@ export default function Navbar() {
                             <>
                                 {/* Signed in routes */}
                                 <NavLink to="/boardgames/new">Add a game</NavLink>
+                                <NavLink to="/profile">Profile</NavLink>
                                 <NavLink onClick={() => { handleSignOut() }} to="/signin">Sign Out</NavLink>
                             </>
                         )

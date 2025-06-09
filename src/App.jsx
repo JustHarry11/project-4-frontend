@@ -6,6 +6,8 @@ import BoardgameShow from "./components/BoardgameShow/BoardgameShow"
 import BoardgameCreate from "./components/BoardgameCreate/BoardgameCreate"
 import BoardgameUpdate from "./components/BoardgameUpdate/BoardgameUpdate"
 
+import UserProfile from "./components/UserProfile/UserProfile"
+
 import UserSignIn from "./components/UserSignIn/UserSignIn"
 import UserSignUp from "./components/UserSignUp/UserSignUp"
 
@@ -21,6 +23,8 @@ function App() {
         
         <Route path="/boardgames/new" element={<BoardgameCreate />} />
         <Route path="/boardgames/:boardgameId/edit" element={<BoardgameUpdate />} />
+
+        <Route path="/profile" element={<UserProfile />} />
 
         <Route path="/signin" element={<UserSignIn />}/>
         <Route path="/signup" element={<UserSignUp />}/>
