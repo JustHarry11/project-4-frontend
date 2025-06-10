@@ -2,6 +2,7 @@ import { Navigate } from "react-router";
 import useFetch from "../../hooks/useFetch";
 import { profileData } from "../../services/profile";
 import BoardgameCard from "../BoardgameCard/BoardgameCard";
+import ResultDelete from "../ResultDelete/ResultDelete";
 
 import './UserProfile.css'
 
@@ -12,6 +13,8 @@ export default function UserProfile() {
         boardgames: [],
         results: [],
     })
+
+    console.log(profile.results)
 
     return (
         <div className="profile-page">
@@ -38,7 +41,8 @@ export default function UserProfile() {
                 ) : (
                     profile.results.map((result) => (
                         <p key={result.id}>
-                            <strong>{result.boardgame_title}</strong> — {result.result}
+                            <strong>{result.boardgame_title}</strong> — {result.result} 
+                            {/* <ResultDelete resultId={result.id}/> */}
                         </p>
                     ))
 

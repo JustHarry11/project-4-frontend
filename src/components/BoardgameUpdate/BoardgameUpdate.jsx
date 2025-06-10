@@ -73,7 +73,9 @@ export default function BoardgameUpdate() {
     }, [boardgameId])
 
     if (!user) return <Navigate to='/signin' />
-    // if (formData.owner && formData.owner !== user.id) return <Navigate to='/signin' />
+
+    /* TEST */
+    if (formData.owner && formData.owner.id !== user.id) return <Navigate to='/signin' />
 
     return (
         <section id="form-page">
