@@ -1,33 +1,30 @@
 .boardgame-card {
   display: flex;
   flex-direction: column;
-  border: 1px solid #ddd;
+  border: 2px solid #5e555558;
   border-radius: 12px;
   overflow: hidden;
   text-decoration: none;
-  background: #242424;
-  color: #333;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   transition: transform 0.2s ease;
   width: 100%px;
-  max-width: 500px;
+  max-width: 400px;
 }
 
 .boardgame-image {
   width: 100%;
-  height: auto;
+  max-height: 300px;
   display: block;
 }
 
 .boardgame-content {
-  padding: 1rem;
+  padding: .75rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
 .boardgame-title {
-  font-size: 1.25rem;
+  font-size: 2rem;
   font-weight: bold;
   text-align: center;
 }
@@ -38,11 +35,10 @@
   align-items: center;
   gap: 0.5rem;
   font-size: 0.9rem;
-  color: white;
 }
 
 .min-max-players, .type-genre {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 2rem;
 }

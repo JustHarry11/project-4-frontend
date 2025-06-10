@@ -24,7 +24,7 @@ export default function BoardgameLike({ boardgameId, initialLiked, onLikeUpdate 
     }
 
     return (
-        <button onClick={toggleLike} disabled={loading} className="like-button">
+        <button onClick={toggleLike} disabled={loading} className="button">
             {liked ? '♥️ Liked' : '🤍 Like'}
         </button>
     )

@@ -3,7 +3,7 @@ import { signinUser } from "../../services/auth";
 import { useNavigate, Navigate } from "react-router";
 import { setToken, getUserFromToken } from "../../utils/auth";
 import { UserContext } from "../../contexts/UserContext";
-
+import './UserSignIn.css'
 
 export default function UserSignIn(){
 
@@ -49,7 +49,7 @@ export default function UserSignIn(){
         return (
         <section id="form-page">
             <form className="form" onSubmit={handleSubmit}>
-                <h1>Log In</h1>
+                <h1>Sign In</h1>
 
                 <div className="input-control">
                     <label htmlFor="email">Email</label>
@@ -66,7 +66,7 @@ export default function UserSignIn(){
                 {error.detail && <p className="error-message">{error.detail}</p>}
 
 
-                <button type="submit">{isLoading ? `Loading...` : 'Log In'}</button>
+                <button type="submit" className='button'>{isLoading ? `Loading...` : 'Log In'}</button>
             </form>
         </section>
     )

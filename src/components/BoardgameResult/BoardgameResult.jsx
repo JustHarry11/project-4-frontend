@@ -1,5 +1,5 @@
 import { resultCreate } from "../../services/results";
-
+import './BoardgameResult.css'
 export default function BoardgameResult({ boardgame }) {
     
     const handleResultClick = async (resultChoice) => {
@@ -14,9 +14,9 @@ export default function BoardgameResult({ boardgame }) {
     return (
         <div className="result">
             <div className="result-buttons">
-                <button onClick={() => handleResultClick('Win')}>Win</button>
-                <button onClick={() => handleResultClick('Draw')}>Draw</button>
-                <button onClick={() => handleResultClick('Loss')}>Loss</button>
+                <button className="button" onClick={() => handleResultClick('Win')}>Win</button>
+                <button className="button" onClick={() => handleResultClick('Draw')}>Draw</button>
+                <button className="button" onClick={() => handleResultClick('Loss')}>Loss</button>
             </div>
         </div>
     )
