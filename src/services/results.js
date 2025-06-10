@@ -43,15 +43,15 @@ export const resultShow = async (boardgameId) => {
     }
 }
 
-export const resultDelete = async (boardgameId) => {
+export const resultDelete = async (resultId) => {
     try {
-        return await axios.delete(`${BASE_URL}/results/${boardgameId}`, {
+        return await axios.delete(`${BASE_URL}/results/${resultId}`, {
             headers: {
                 Authorization: `Bearer ${getToken()}`
             }
         })
     } catch (error) {
         console.log(error)
-        throw new error
+        throw error
     }
 }
