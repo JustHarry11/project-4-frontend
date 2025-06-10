@@ -28,7 +28,8 @@ export default function UserProfile() {
 
     return (
         <div className="profile-page">
-            <h1 className="profile-title">{profile.username}'s Profile</h1>
+            <h1 className="profile-title">{profile.username.charAt(0).toUpperCase() + profile.username.slice(1)}'s Profile</h1>
+            <h1 className="profile-title">Your Games</h1>
 
             <div className="profile-games">
                 {error ? (
