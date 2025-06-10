@@ -3,6 +3,8 @@ import useFetch from "../../hooks/useFetch";
 import { profileData } from "../../services/profile";
 import BoardgameCard from "../BoardgameCard/BoardgameCard";
 
+import './UserProfile.css'
+
 export default function UserProfile() {
 
     const { data: profile, isLoading, error } = useFetch(profileData, {
@@ -13,9 +15,9 @@ export default function UserProfile() {
 
     return (
         <div className="profile-page">
-            <h1>{profile.username}'s Profile</h1>
+            <h1 className="profile-title">{profile.username}'s Profile</h1>
 
-            <section>
+            <div className="profile-games">
                 {error ? (
                     <p className="error-message">{error}</p>
                 ) : isLoading ? (
@@ -27,22 +29,21 @@ export default function UserProfile() {
                 ) : (
                     <p>No Boardgames Found</p>
                 )}
-            </section>
+            </div>
 
-            <section>
+            <div className="profile-results">
                 <h2>Your Results</h2>
                 {profile.results.length === 0 ? (
                     <p>No results added.</p>
                 ) : (
-                    <ul>
-                        {profile.results.map((result) => (
-                            <li key={result.id}>
-                                <strong>{result.boardgame_title}</strong> — {result.result}
-                            </li>
-                        ))}
-                    </ul>
+                    profile.results.map((result) => (
+                        <p key={result.id}>
+                            <strong>{result.boardgame_title}</strong> — {result.result}
+                        </p>
+                    ))
+
                 )}
-            </section>
+            </div>
         </div>
     )
 }

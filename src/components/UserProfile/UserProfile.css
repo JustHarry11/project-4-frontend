@@ -1,0 +1,16 @@
+.profile-title {
+    text-align: center;
+}
+
+.profile-games {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem
+}
+
+.profile-results {
+    text-align: center;
+    text-decoration: none;
+    list-style-type: none;
+}
