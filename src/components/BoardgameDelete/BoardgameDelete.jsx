@@ -24,7 +24,7 @@ export default function BoardgameDelete(){
     return (
         <>
             {error && <p className="error-message">{error}</p>}
-            <button className="delete-boardgame" onClick={handleDelete}>
+            <button className="button" onClick={handleDelete}>
                 {isLoading ? `Loading ... ` : 'Delete'}
             </button>
         </>

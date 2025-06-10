@@ -78,25 +78,29 @@ export default function BoardgameShow() {
                                 </div>
 
                                 <div className="single-boardgame-content">
+                                    <h2>Description : </h2>
                                     <p>{boardgame.description}</p>
+                                    <h2>Instruction : </h2>
                                     <p>{boardgame.instruction}</p>
                                 </div>
                                 <div className='owner'>
-                                    <span>{boardgame.owner?.username 
-                                    ? boardgame.owner.username.charAt(0).toUpperCase() + boardgame.owner.username.slice(1)
-                                    : "Unknow Owner"}
+                                    <span>{boardgame.owner?.username
+                                        ? boardgame.owner.username.charAt(0).toUpperCase() + boardgame.owner.username.slice(1)
+                                        : "Unknow Owner"}
                                     </span>
                                 </div>
 
 
                                 {user && user.id === boardgame.owner?.id &&
                                     <div className="single-control">
-                                        <Link className="single-edit-boardgame" to={`/boardgames/${boardgameId}/edit`}>Edit</Link>
+                                        <Link className="button" to={`/boardgames/${boardgameId}/edit`}>Edit</Link>
                                         <BoardgameDelete />
                                     </div>}
-                                {user && (
-                                    <BoardgameLike boardgameId={boardgameId} initialLiked={boardgame.likes?.includes(user.id)} onLikeUpdate={handleLikeUpdate} />
-                                )}
+                                {user &&
+                                    <div className="single-like">
+                                        <BoardgameLike boardgameId={boardgameId} initialLiked={boardgame.likes?.includes(user.id)} onLikeUpdate={handleLikeUpdate} />
+                                    </div>
+                                }
                                 {user &&
                                     <div className="results">
                                         <BoardgameResult boardgame={boardgame} />

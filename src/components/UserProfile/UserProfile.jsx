@@ -1,4 +1,4 @@
-import { Navigate } from "react-router";
+import { useEffect, useState } from "react";
 import useFetch from "../../hooks/useFetch";
 import { profileData } from "../../services/profile";
 import BoardgameCard from "../BoardgameCard/BoardgameCard";
@@ -14,7 +14,17 @@ export default function UserProfile() {
         results: [],
     })
 
-    console.log(profile.results)
+    const [ results, setResults ] = useState([]);
+
+    useEffect(() => {
+        if (profile.results) {
+            setResults(profile.results)
+        }
+    }, [profile.results])
+
+    const handleDeleteResult = (id) => {
+        setResults((prevResults) => prevResults.filter((r) => r.id !== id))
+    };
 
     return (
         <div className="profile-page">
@@ -36,13 +46,13 @@ export default function UserProfile() {
 
             <div className="profile-results">
                 <h2>Your Results</h2>
-                {profile.results.length === 0 ? (
+                {results.length === 0 ? (
                     <p>No results added.</p>
                 ) : (
-                    profile.results.map((result) => (
+                    results.map((result) => (
                         <p key={result.id}>
                             <strong>{result.boardgame_title}</strong> — {result.result} 
-                            {/* <ResultDelete resultId={result.id}/> */}
+                            <ResultDelete resultId={result.id} onDelete={handleDeleteResult}/>
                         </p>
                     ))
 
