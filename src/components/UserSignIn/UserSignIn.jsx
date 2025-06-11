@@ -48,8 +48,8 @@ export default function UserSignIn(){
 
         return (
         <section id="form-page">
-            <form className="form" onSubmit={handleSubmit}>
-                <h1>Sign In</h1>
+            <form className="user-form" onSubmit={handleSubmit}>
+                <h1 className="user-form-title">Sign In</h1>
 
                 <div className="input-control">
                     <label htmlFor="email">Email</label>

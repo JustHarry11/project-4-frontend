@@ -65,35 +65,38 @@ export default function BoardgameShow() {
                                 <img src={boardgame.image_url} alt={boardgame.title} className='boardgame-image' />
                                 <div className="single-content">
                                     <div className='single-type-genre'>
-                                        <span>Type - {boardgame.type}</span>
-                                        <span>Genre - {boardgame.genre}</span>
+                                        <p className="content-type">Type - </p><p>{boardgame.type}</p>
+                                        <p className="content-type">Genre - </p><p>{boardgame.genre}</p>
                                     </div>
                                     <div className='single-min-max-players'>
-                                        <span>Max Players - {boardgame.max_players}</span>
-                                        <span>Min Players - {boardgame.min_players}</span>
+                                        <p className="content-type">Max Players - </p><p>{boardgame.max_players}</p>
+                                        <p className="content-type">Min Players - </p><p>{boardgame.min_players}</p>
                                     </div>
                                     <div className='single-likes'>
-                                        <span>Likes {boardgame.likes ? boardgame.likes.length : 0}</span>
+                                        <p>♥️ {boardgame.likes ? boardgame.likes.length : 0}</p>
                                     </div>
                                 </div>
 
-                                <div className="single-boardgame-content">
-                                    <h2>Description : </h2>
+                                <div className="description-content">
+                                    <h3>Description : </h3>
                                     <p>{boardgame.description}</p>
-                                    <h2>Instruction : </h2>
+                                </div>
+
+                                <div className="instruction-content">
+                                    <h3>Instruction : </h3>
                                     <p>{boardgame.instruction}</p>
                                 </div>
                                 <div className='owner'>
-                                    <span>{boardgame.owner?.username
+                                    <h4>Created By - {boardgame.owner?.username
                                         ? boardgame.owner.username.charAt(0).toUpperCase() + boardgame.owner.username.slice(1)
                                         : "Unknow Owner"}
-                                    </span>
+                                    </h4>
                                 </div>
 
 
                                 {user && user.id === boardgame.owner?.id &&
                                     <div className="single-control">
-                                        <Link className="button" to={`/boardgames/${boardgameId}/edit`}>Edit</Link>
+                                        <Link className="edit-button" to={`/boardgames/${boardgameId}/edit`}>Edit</Link>
                                         <BoardgameDelete />
                                     </div>}
                                 {user &&

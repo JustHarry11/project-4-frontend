@@ -1,7 +1,7 @@
 .boardgame-card {
   display: flex;
   flex-direction: column;
-  border: 2px solid #5e555558;
+  border: 2px solid #00000043;
   border-radius: 12px;
   overflow: hidden;
   text-decoration: none;
@@ -41,4 +41,8 @@
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
+}
+
+.boardgame-card:hover {
+    border: 2px solid #610000;
 }

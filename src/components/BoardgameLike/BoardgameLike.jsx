@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { boardgameLike } from "../../services/boardgames";
+import './BoardgameLike.css'
 
 export default function BoardgameLike({ boardgameId, initialLiked, onLikeUpdate }) {
     const [ liked, setLiked ] = useState(initialLiked)
@@ -24,7 +25,7 @@ export default function BoardgameLike({ boardgameId, initialLiked, onLikeUpdate 
     }
 
     return (
-        <button onClick={toggleLike} disabled={loading} className="button">
+        <button onClick={toggleLike} disabled={loading} className="like-button">
             {liked ? '♥️ Liked' : '🤍 Like'}
         </button>
     )
