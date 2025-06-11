@@ -4,7 +4,7 @@
   align-items: center;
   min-height: 100vh;
   padding: 20px;
-  background-color: #564c4c;
+  background-color: #FCDF09;
 }
 
 .user-form-title {
@@ -12,7 +12,7 @@
 }
 
 .user-form {
-  background: #514545;
+  background: #FCDF09;
   padding: 30px 40px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
@@ -21,7 +21,7 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
-  color: rgba(255, 255, 255, 0.87);
+  color: black;
 }
 
 .input-control{
@@ -32,7 +32,7 @@
 .input-control label {
   font-weight: 600;
   margin-bottom: 6px;
-  color: rgba(255, 255, 255, 0.87);
+  color: black;
 }
 
 .input-control input,
@@ -43,21 +43,21 @@
   border-radius: 4px;
   font-size: 1rem;
   font-family: inherit;
-  background-color: #a3a3a3;
-  color: rgb(0, 0, 0);
+  background-color: black;
+  color: white;
 }
 
 .input-control input::placeholder,
 .input-control textarea::placeholder {
-  color: #888; /* lighter placeholder */
+  color: #FCDF09;
 }
 
 .input-control input:focus,
 .input-control textarea:focus,
 .input-control select:focus {
   outline: none;
-  box-shadow: 0 0 5px #610000;
-  color: #000000;
+  box-shadow: 0 0 5px black;
+  color: white;
 }
 
 .error-message {

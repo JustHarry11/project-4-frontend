@@ -4,7 +4,7 @@
   align-items: center;
   min-height: 100vh;
   padding: 20px;
-  background-color: #564c4c;
+  background-color: #FCDF09;
 }
 
 .boardgame-create-form-title {
@@ -12,7 +12,7 @@
 }
 
 .boardgame-create-form {
-  background: #514545;
+  background: #FCDF09;
   padding: 30px 40px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
@@ -21,7 +21,7 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
-  color: rgba(255, 255, 255, 0.87);
+  color: black
 }
 
 .input-control-create {
@@ -32,7 +32,7 @@
 .input-control-create label {
   font-weight: 600;
   margin-bottom: 6px;
-  color: rgba(255, 255, 255, 0.87);
+  color: black;
 }
 
 .input-control-create input,
@@ -43,25 +43,26 @@
   border-radius: 4px;
   font-size: 1rem;
   font-family: inherit;
-  background-color: #a3a3a3;
-  color: rgb(0, 0, 0);
+  background-color: #000000;
+  color: rgb(255, 255, 255);
 }
 
 .input-control-create input::placeholder,
 .input-control-create textarea::placeholder {
-  color: #888;
+  color: #000000;
 }
 
 .input-control-create input:focus,
 .input-control-create textarea:focus,
 .input-control-create select:focus {
   outline: none;
-  box-shadow: 0 0 5px #610000;
-  color: #000000;
+  box-shadow: 0 0 5px black;
+  color: #ffffff;
 }
 
 .error-message-create {
-  color: rgb(251, 61, 61);
-  font-size: 0.8rem;
+  color: rgb(241, 0, 0);
+  font-size: 0.75rem;
+  font-style:italic;
   margin-top: 4px;
 }

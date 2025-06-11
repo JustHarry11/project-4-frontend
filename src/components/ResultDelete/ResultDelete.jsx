@@ -21,7 +21,7 @@ export default function ResultDelete({ resultId, onDelete}) {
     return (
         <>
             {error && <p className="error-message">{error}</p>}
-            <button className="button" onClick={handleDelete} disabled={isLoading}>
+            <button className="x-button" onClick={handleDelete} disabled={isLoading}>
                 {isLoading ? `Loading ... ` : 'Delete'}
             </button>
         </>

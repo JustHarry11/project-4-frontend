@@ -13,7 +13,7 @@
     border-radius: 12px;
     overflow: hidden;
     text-align: center;
-    color: rgb(255, 255, 255);
+    color: black;
     transition: transform 0.2s ease;
     width: 100%;
     max-width: 500px;
@@ -33,11 +33,31 @@
     flex-direction: column;
 }
 
+.single-content {
+    gap: 1rem;
+    align-items: center;
+}
+
 .single-min-max-players,
 .single-type-genre {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 1rem;
+    width: 100%;
+    max-width: 400px;
+}
+.single-min-max-players p,
+.single-type-genre p {
+    margin: 0.25rem 0;
+    text-align: center;
+}
+
+.single-type-genre div,
+.single-min-max-players div {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the text horizontally */
+    justify-content: center; /* Centers content vertically if there's space */
 }
 
 .single-control {
@@ -62,12 +82,12 @@
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #7f7f7fb6;
+  background-color: #000000;
   cursor: pointer;
   transition: border-color 0.25s;
 }
 .edit-button:hover {
-  background-color: #610000;
+  color:#FCDF09;
 }
 .edit-button:focus,
 .edit-button:focus-visible {

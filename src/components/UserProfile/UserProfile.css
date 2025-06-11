@@ -1,16 +1,22 @@
 .profile-title {
     text-align: center;
+    font-size: 2rem;
 }
 
 .profile-games {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 2rem
+    gap: 2rem;
+    
 }
 
 .profile-results {
     text-align: center;
     text-decoration: none;
     list-style-type: none;
+}
+
+.result-button {
+    padding: 1rem;
 }

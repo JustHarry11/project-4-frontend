@@ -5,13 +5,13 @@ export default function BoardgameCard({ boardgame }) {
     return (
         <Link to={`/boardgames/${boardgame.id}`}>
             <div className='boardgame-card'>
-                <Link to={`/boardgames/${boardgame.id}`}>
-                    <img src={boardgame.image_url} alt={boardgame.title} className='boardgame-image' />
-                </Link>
+
+                <img src={boardgame.image_url} alt={boardgame.title} className='boardgame-image' />
+
                 <div className='boardgame-content'>
-                    <Link to={`/boardgames/${boardgame.id}`}>
-                        <h2 className='boardgame-title'>{boardgame.title}</h2>
-                    </Link>
+
+                    <h2 className='boardgame-title'>{boardgame.title}</h2>
+
                     <div className='boardgame-details'>
                         <p>{boardgame.description}</p>
                         <div className='type-genre'>
@@ -25,9 +25,6 @@ export default function BoardgameCard({ boardgame }) {
                         <div className='likes'>
                             <span>♥️ {boardgame.likes.length}</span>
                         </div>
-                        {/* <div className='owner'>
-                                <span>{boardgame.owner.username.charAt(0).toUpperCase() + boardgame.owner.username.slice(1)}</span>
-                            </div> */}
                     </div>
                 </div>
             </div>
