@@ -4,11 +4,15 @@
   align-items: center;
   min-height: 100vh;
   padding: 20px;
-  background-color: #242424; /* same as root bg */
+  background-color: #564c4c;
+}
+
+.boardgame-create-form-title {
+  text-align: center;
 }
 
 .boardgame-create-form {
-  background: #1a1a1a; /* matches your button bg */
+  background: #514545;
   padding: 30px 40px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
@@ -17,7 +21,7 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
-  color: rgba(255, 255, 255, 0.87); /* text color from :root */
+  color: rgba(255, 255, 255, 0.87);
 }
 
 .input-control-create {
@@ -35,44 +39,25 @@
 .input-control-create textarea,
 .input-control-create select {
   padding: 8px 10px;
-  border: 1px solid #444; /* subtle border */
+  border: 1px solid #444;
   border-radius: 4px;
   font-size: 1rem;
   font-family: inherit;
-  background-color: #242424;
-  color: rgba(255, 255, 255, 0.87);
+  background-color: #a3a3a3;
+  color: rgb(0, 0, 0);
 }
 
 .input-control-create input::placeholder,
 .input-control-create textarea::placeholder {
-  color: #888; /* lighter placeholder */
+  color: #888;
 }
 
 .input-control-create input:focus,
 .input-control-create textarea:focus,
 .input-control-create select:focus {
   outline: none;
-  border-color: #646cff;
-  box-shadow: 0 0 5px #646cff;
-  background-color: #2a2a2a;
-  color: #fff;
-}
-
-.button {
-  margin-top: 15px;
-  padding: 10px 15px;
-  background-color: #1a1a1a; /* same as your button */
-  color: rgba(255, 255, 255, 0.87);
-  border: 1px solid transparent;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: border-color 0.25s, background-color 0.25s;
-}
-
-.button:hover {
-  border-color: #646cff;
-  background-color: #2e2e2e;
+  box-shadow: 0 0 5px #610000;
+  color: #000000;
 }
 
 .error-message-create {

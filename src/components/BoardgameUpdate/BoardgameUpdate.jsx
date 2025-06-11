@@ -80,7 +80,7 @@ export default function BoardgameUpdate() {
     return (
         <section id="form-page">
             <form className='boardgame-create-form' onSubmit={handleSubmit}>
-                <h1>Editing {formData.title}</h1>
+                <h1 className="boardgame-create-form-title">Editing - {formData.title}</h1>
                 {/* Title */}
                 <div className="input-control-create">
                     <label htmlFor="title">Title</label>

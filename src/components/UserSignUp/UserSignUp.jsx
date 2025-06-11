@@ -2,7 +2,7 @@ import { useState, useContext } from "react"
 import { Link, useNavigate, Navigate} from "react-router"
 import { signupUser } from "../../services/auth"
 import { UserContext } from "../../contexts/UserContext"
-import './UserSignUp.css'
+//import './UserSignUp.css'
 export default function UserSignUp() {
 
     const { user } = useContext(UserContext)
@@ -45,7 +45,7 @@ export default function UserSignUp() {
 
         return (
         <section id="form-page">
-            <form className="form" onSubmit={handleSubmit}>
+            <form className="user-form" onSubmit={handleSubmit}>
                 <h1>Create User</h1>
 
                 <div className="input-control">
