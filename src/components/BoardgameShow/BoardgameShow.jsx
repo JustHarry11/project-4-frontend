@@ -65,12 +65,24 @@ export default function BoardgameShow() {
                                 <img src={boardgame.image_url} alt={boardgame.title} className='boardgame-image' />
                                 <div className="single-content">
                                     <div className='single-type-genre'>
-                                        <p className="content-type">Type - </p><p>{boardgame.type}</p>
-                                        <p className="content-type">Genre - </p><p>{boardgame.genre}</p>
+                                        <div>
+                                            <p className="content-type">Type</p>
+                                            <p>{boardgame.type}</p>
+                                        </div>
+                                        <div>
+                                            <p className="content-type">Genre</p>
+                                            <p>{boardgame.genre}</p>
+                                        </div>
                                     </div>
                                     <div className='single-min-max-players'>
-                                        <p className="content-type">Max Players - </p><p>{boardgame.max_players}</p>
-                                        <p className="content-type">Min Players - </p><p>{boardgame.min_players}</p>
+                                        <div>
+                                            <p className="content-type">Max Players</p>
+                                            <p>{boardgame.max_players}</p>
+                                        </div>
+                                        <div>
+                                            <p className="content-type">Min Players</p>
+                                            <p>{boardgame.min_players}</p>
+                                        </div>
                                     </div>
                                     <div className='single-likes'>
                                         <p>♥️ {boardgame.likes ? boardgame.likes.length : 0}</p>

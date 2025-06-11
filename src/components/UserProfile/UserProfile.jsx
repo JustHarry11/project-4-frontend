@@ -29,7 +29,7 @@ export default function UserProfile() {
     return (
         <div className="profile-page">
             <h1 className="profile-title">{profile.username.charAt(0).toUpperCase() + profile.username.slice(1)}'s Profile</h1>
-            <h1 className="profile-title">Your Games</h1>
+            <h2 className="profile-title">Your Games</h2>
 
             <div className="profile-games">
                 {error ? (
@@ -52,8 +52,11 @@ export default function UserProfile() {
                 ) : (
                     results.map((result) => (
                         <p key={result.id}>
-                            <strong>{result.boardgame_title}</strong> — {result.result} 
-                            <ResultDelete resultId={result.id} onDelete={handleDeleteResult}/>
+                            <strong>{result.boardgame_title}</strong> — {result.result}
+                            <span className="result-button">
+                                <ResultDelete resultId={result.id} onDelete={handleDeleteResult}/>
+                            </span>
+                            
                         </p>
                     ))
 

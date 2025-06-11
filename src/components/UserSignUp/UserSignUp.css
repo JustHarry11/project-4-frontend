@@ -4,11 +4,11 @@
   align-items: center;
   min-height: 100vh;
   padding: 20px;
-  background-color: #564c4c; /* same as root bg */
+  background-color: #FCDF09;
 }
 
 .boardgame-create-form {
-  background: #000000; /* matches your button bg */
+  background: #FCDF09;
   padding: 30px 40px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
@@ -17,7 +17,7 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
-  color: rgba(255, 255, 255, 0.87); /* text color from :root */
+  color: black
 }
 
 .input-control{
