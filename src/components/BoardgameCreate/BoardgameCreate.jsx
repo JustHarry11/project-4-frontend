@@ -27,15 +27,30 @@ export default function BoardgameCreate() {
         async function handleSubmit(event) {
         event.preventDefault()
         setIsLoading(true)
+        setError({});
 
-        const newFormData = {...formData}
+        const requiredFields = ['title', 'description', 'instruction', 'image_url', 'type', 'genre', 'min_players', 'max_players'];
+        const newErrors = {}
+
+        for (let field of requiredFields) {
+            const value = formData[field]
+            if(!value || (typeof value === 'string' && value.trim() === '')) {
+                newErrors[field] = 'This field is required.';
+            }
+        }
+
+        if(Object.keys(newErrors).length > 0) {
+            setError(newErrors);
+            setIsLoading(false);
+            return;
+        }
+        // const newFormData = {...formData}
         
         try {
-            const { data } = await boardgameCreate(newFormData)
-            console.log(data)
+            const { data } = await boardgameCreate(formData)
             navigate(`/boardgames/${data.id}`)
         } catch (error) {
-            if (error.response && error.response.data) {
+            if (error.response?.data) {
                 setError(error.response.data);
             }else {
                 console.error('Unexpected error:', error);

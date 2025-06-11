@@ -31,7 +31,7 @@ export const boardgameCreate = async (formData) => {
         }
         return await axios.post(`${BASE_URL}/boardgames/`, data, {
             headers: {
-                Authorization: `Bearer ${getToken()}`, 'Content-Type': 'multipart/form-data'
+                Authorization: `Bearer ${getToken()}`
             }
         })
     } catch (error) {
