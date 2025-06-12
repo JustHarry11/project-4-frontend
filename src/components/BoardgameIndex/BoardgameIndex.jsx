@@ -36,12 +36,12 @@ export default function BoardgameIndex() {
                 {error
                     ? <p className="error-message">{error}</p>
                     : isLoading
-                        ? <p>Loading ...</p>
+                        ? <p className="message">Loading ...</p>
                         : filteredBoardgames.length > 0
                             ? filteredBoardgames.map(boardgame => ( <BoardgameCard key={boardgame.id} boardgame={boardgame}/>
 
                             ))
-                            : <p> No Boardgames Found</p>
+                            : <p className="message"> No Boardgames Found</p>
                 }
             </section>
         </>

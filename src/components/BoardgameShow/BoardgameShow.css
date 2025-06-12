@@ -85,6 +85,8 @@
   background-color: #000000;
   cursor: pointer;
   transition: border-color 0.25s;
+  color: white;
+  text-decoration: inherit;
 }
 .edit-button:hover {
   color:#FCDF09;

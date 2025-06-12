@@ -28,5 +28,11 @@
   padding: 0.5rem 1rem;
   font-size: 1rem;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 2px solid black;
+  color: black;
+  background-color: #FCDF09;;
+}
+
+.message{
+  text-align: center;
 }
