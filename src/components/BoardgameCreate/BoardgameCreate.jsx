@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { UserContext } from "../../contexts/UserContext";
 import { Navigate, useNavigate } from "react-router";
 import { boardgameCreate } from "../../services/boardgames";
 import './BoardgameCreate.css'
@@ -17,6 +18,11 @@ export default function BoardgameCreate() {
     const [error, setError] = useState({})
     const [isLoading, setIsLoading] = useState(false)
     const navigate = useNavigate()
+    const { user } = useContext(UserContext)
+
+    if(!user) {
+        return <Navigate to="/signin" replace />
+    }
 
     function handleChange({ target: { name, value, type, files } }) {
         if (type === 'file') {
