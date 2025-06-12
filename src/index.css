@@ -1,5 +1,5 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Urbanist", sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -18,12 +18,6 @@
   font-size: 0.8rem;
 }
 
-/* a {
-  font-weight: 500;
-  color: white;
-  text-decoration: inherit;
-} */
-
 
 button {
   border-radius: 8px;
@@ -41,7 +35,7 @@ button:hover {
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: 4px auto #FCDF09;
 }
 
 @media (prefers-color-scheme: light) {

@@ -56,8 +56,8 @@
 .single-min-max-players div {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centers the text horizontally */
-    justify-content: center; /* Centers content vertically if there's space */
+    align-items: center;
+    justify-content: center;
 }
 
 .single-control {
