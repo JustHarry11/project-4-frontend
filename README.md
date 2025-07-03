@@ -60,6 +60,9 @@ I started working on this solo project on 4th June and finish on the 12th June
 
 # Planning
 
+![Wireframe](https://github.com/user-attachments/assets/c939a822-c5f2-43d4-90e0-af4a7e3ed09c)
+![WinDrawLose](https://github.com/user-attachments/assets/01570cde-512e-4938-bdf0-70f4740a40b2)
+![ERDBored](https://github.com/user-attachments/assets/d2e1eca9-3991-4a13-898b-c229bf82ce94)
 
 
 # Build/Code Process
