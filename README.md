@@ -178,14 +178,17 @@ Somethink that I was thinking about alot during the creation of the back end was
 
 # Wins
 
+### CSS
 
+I went with a similar theme to my previous projects but it just needed look right and too basic. Once I decided to change the colour to yellow I felt it made everything pop and Imporved the asthetic of the site. I wanted to make a fun and cute site and I believe that through the styling I was able to achieve that.
 
 
 # Key Learnings/Takeaways
 
-
+I learnt a lot about python through creating the back end. I was nice to learn about another way of going about it, even though I felt it was a lot easier to understand express, I enjoyed how simple to was to set up with django and I can see the benefits of using that type of back end as it can be set up very quickly.
 
 # Future Improvements
 
-
+- More detail with the results ( opponents and win rate with different games )
+- More detail to the instructions with more of a step by step guide on how to play or link to the rules
 
